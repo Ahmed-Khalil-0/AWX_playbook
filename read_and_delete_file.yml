@@ -1,0 +1,17 @@
+
+- name: Read file content, print it, and delete the file
+  hosts: all
+  become: yes
+  tasks:
+    - name: Read the content of the file
+      command: cat /tmp/helloworld.txt
+      register: file_content
+
+    - name: Print file content
+      debug:
+        msg: "{{ file_content.stdout }}"
+
+    - name: Delete the file
+      file:
+        path: /tmp/helloworld.txt
+        state: absent

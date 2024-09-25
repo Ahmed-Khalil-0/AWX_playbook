@@ -1,0 +1,9 @@
+- name: Create a file and write "Hello World" to it
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create a file and write "Hello World" to it
+      copy:
+        dest: /tmp/helloworld.txt
+        content: "Hello World"
+      # This will create the file and write "Hello World" into it.
