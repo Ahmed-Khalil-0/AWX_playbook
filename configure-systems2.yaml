@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  gather_facts: false
+  gather_facts: true
   hosts: all
   tasks:
     - name: Print current host's IP address
