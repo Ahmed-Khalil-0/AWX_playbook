@@ -2,9 +2,9 @@
   gather_facts: false
   hosts: all
   tasks:
-    - name: Print current host
+    - name: Print current host's IP address
       debug:
-        msg: "Currently on {{ inventory_hostname }}"
+        msg: "Currently on {{ ansible_host }}"
     
     - name: Hello Message
       debug:
