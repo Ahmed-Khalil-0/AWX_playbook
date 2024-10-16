@@ -2,6 +2,10 @@
   gather_facts: false
   hosts: all
   tasks:
+    - name: Print current host
+      debug:
+        msg: "Currently on {{ inventory_hostname }}"
+    
     - name: Hello Message
       debug:
         msg: "Hello World!"
