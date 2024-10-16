@@ -4,7 +4,7 @@
   tasks:
     - name: Print current host's IP address
       debug:
-        msg: "Currently on {{ ansible_host }} {{ ansible_port }}"
+        msg: "Currently on {{ ansible_host }} {{ ansible_ip }}  {{ ansible_port }}"
     
     - name: Hello Message
       debug:
